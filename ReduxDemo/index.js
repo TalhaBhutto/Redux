@@ -10,7 +10,8 @@ function buyCake(){
 }
 
 const initialState={
-    numOfCake=10
+    numOfCake:10,
+    numOfIceCreams:20
 }
 const reducer =(state=initialState,action)=>{
     switch(action.type){
@@ -24,4 +25,9 @@ const reducer =(state=initialState,action)=>{
 }
 
 const store =createStore(reducer);
-
+console.log('initial state',store.getState())
+const unsubscribe=store.subscribe(()=>console.log('Updated State', store.getState()))
+store.dispatch(buyCake())
+store.dispatch(buyCake())
+store.dispatch(buyCake())
+unsubscribe()
