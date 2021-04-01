@@ -46,8 +46,7 @@ const cakeReducer=(state=InitialCakeState,action)=>{
                     ... state,
                     Ncake: state.Ncake-1
                 }
-                default:
-                    state
+                default: return state
 }
 }
 const icecreamReducer=(state=InitialIceCreamState,action)=>{
@@ -56,8 +55,7 @@ const icecreamReducer=(state=InitialIceCreamState,action)=>{
                     ... state,
                     Nicecream: state.Nicecream-1
                 }
-                default:
-                    state
+                default: return state
 }
 }
 const rootReducer=combinereducers({
