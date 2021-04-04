@@ -63,7 +63,7 @@ const fetchUsers=()=>{
             dispatch(fetchUsersSuccess(users))
         })
         .catch(error=>{
-            dispatch(fetchUsersFailure(error.message))1
+            dispatch(fetchUsersFailure(error.message))11
         })
     }
 }
