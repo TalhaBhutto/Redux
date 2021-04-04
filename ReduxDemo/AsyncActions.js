@@ -7,7 +7,7 @@ const axios= require('axios')
 const initialState={
     loading: false,
     users:[],
-    error='Opps, No result'
+    error:''
 }
 
 const FETCH_USERS_REQUEST ='FETCH_USERS_REQUEST'
@@ -53,3 +53,20 @@ const reducer = (state=initialState,actions)=>{
             }
     }
 }
+
+const fetchUsers=()=>{
+    return function(dispatch){
+        dispatch(fetchUsersRequest())
+        axios.get('https://jsonplaceholder.typicode.com/todos')
+        .then(Response=>{
+            const users=Response.data.map(user=>user.id)
+            dispatch(fetchUsersSuccess(users))
+        })
+        .catch(error=>{
+            dispatch(fetchUsersFailure(error.message))
+        })
+    }
+}
+const store= createStore(reducer, applyMiddleware(thunkMiddleware))
+store.subscribe(()=>{console.log(store.getState())})
+store.dispatch(fetchUsers())
