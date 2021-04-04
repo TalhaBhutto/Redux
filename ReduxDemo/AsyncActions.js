@@ -57,16 +57,16 @@ const reducer = (state=initialState,actions)=>{
 const fetchUsers=()=>{
     return function(dispatch){
         dispatch(fetchUsersRequest())
-        axios.get('https://jsonplaceholder.typicode.com/users/123')
-        .then(Response=>{
-            const users=Response.data.map(user=>user.id)
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(response=>{
+            const users=response.data.map(user=>user.id)
             dispatch(fetchUsersSuccess(users))
         })
         .catch(error=>{
-            dispatch(fetchUsersFailure(error.message))111
+            dispatch(fetchUsersFailure(error.message))
         })
     }
 }
 const store= createStore(reducer, applyMiddleware(thunkMiddleware))
 store.subscribe(()=>{console.log(store.getState())})
-store.dispatch(fetchUsers())221
+store.dispatch(fetchUsers())
