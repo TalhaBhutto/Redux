@@ -1,8 +1,9 @@
 const redux = require('redux')
-const createStore=redux.createStore
-const applyMiddleware=redux.applyMiddleware
 const thunkMiddleware=require('redux-thunk').default
 const axios= require('axios')
+const createStore=redux.createStore
+const applyMiddleware=redux.applyMiddleware
+
 
 const initialState={
     loading: false,
