@@ -10,6 +10,6 @@ export default function cake() {
 }
 const mapStareTOProps=state={
     return {
-        numOfCakes:state.numOfCakes123456789
+        numOfCakes:state.numOfCakes1234567891
     }
 }
