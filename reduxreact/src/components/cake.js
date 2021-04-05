@@ -8,3 +8,8 @@ export default function cake() {
         </div>
     )
 }
+const mapStareTOProps=state={
+    return {
+        numOfCakes:state.numOfCakes
+    }
+}
