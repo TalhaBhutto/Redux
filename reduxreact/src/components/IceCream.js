@@ -12,7 +12,7 @@ function IceCream(props) {
 }
 const mapStateToProps=state=>{
     return{
-        numOfIceCreams:state.numOfIceCreams
+        numOfIceCreams:state.IceCreamR.numOfIceCreams
     }
 }
 const mapDispatchToProps=dispatch=>{

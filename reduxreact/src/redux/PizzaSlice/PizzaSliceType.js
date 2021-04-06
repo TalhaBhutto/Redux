@@ -1,0 +1,1 @@
+export const BUY_PIZZASLICE='BUY_PIZZASLICE'
