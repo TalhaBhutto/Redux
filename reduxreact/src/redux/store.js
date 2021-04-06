@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware} from 'redux'
 import RootReducer from "./RootReducer"
-import jogger from 'redux-logger'
+import logger from 'redux-logger'
 
-const store=createStore(RootReducer,applyMiddleware(jogger))
+const store=createStore(RootReducer,applyMiddleware(logger))
 
 export default store
