@@ -1,4 +1,4 @@
-import {FETCH_USER_FAILURE,FETCH_USER_REQUEST,FETCH_USER_SUCCESS} from './UserType'
+import {FETCH_USER_FAILURE,FETCH_USER_REQUEST,FETCH_USER_SUCCESS} from './UserTypes'
 
 export const FetchUserRequest=()=>{
     return{
