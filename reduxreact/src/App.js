@@ -5,13 +5,18 @@ import {Provider} from 'react-redux'
 import HooksCakeContainer from './HooksCakeContainer';
 import IceCream from './components/IceCream';
 import PizzaSlice from './components/PizzaSlice';
+import NewCake from './components/NewCake'
+import ItemContainer from './components/ItemContainer';
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
+      <ItemContainer cake/>
+      <ItemContainer/>
       <HooksCakeContainer/>
       <Cakes/>
+      <NewCake/>
       <IceCream/>
       <PizzaSlice/>
     </div>
