@@ -32,7 +32,7 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchUsers: () => dispatch(fetchUsers())
   }
-}abcdefg
+}abcdefgh
 
 export default connect(
   mapStateToProps,
